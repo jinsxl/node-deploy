@@ -1,7 +1,7 @@
 version: 0.2
 
 phases:
-  instasll:
+  install:
     runtime-versions:
       nodejs: 14
   pre_build:
