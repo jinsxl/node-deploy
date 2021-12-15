@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  instasll:
+    runtime-versions:
+      nodejs: 14
+  pre_build:
+    commands:
+      - echo Installing NPM dependencies on `date`
+      - npm install
+  build:
+    commands:
+      - echo Build Start on `date`
+  post_build:
+    commands:
+      - echo Build Completed on `date`
+      - pwd
+
+artifacts:
+  files:
+    - "**/*"
+
+cache:
+  paths:
+    - "node_modules/**/*"
