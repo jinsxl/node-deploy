@@ -31,4 +31,4 @@ else
 fi
 
 echo "> $IDLE_PROFILE start"
-pm2 start ecosystem.config.js --env $IDLE_PROFILE
+pm2 start $IDLE_PROFILE.config.js
