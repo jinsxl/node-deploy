@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "> Get Current Profile"
-CURRENT_PROFILE=$(curl -s http://localhost/profile)
+CURRENT_PROFILE=$(curl -s http://127.0.0.1/profile)
 
 if [ $CURRENT_PROFILE == set1 ]
 then
@@ -14,7 +14,7 @@ else
 fi
 
 echo "> Switch Port to $IDLE_PORT"
-echo "set \$service_url http://localhost:${IDLE_PORT};" | sudo tee /etc/nginx/conf.d/service-url.inc
+echo "set \$service_url http://127.0.0.1:${IDLE_PORT};" | sudo tee /etc/nginx/conf.d/service-url.inc
 
 echo "> Nginx Reload"
 sudo systemctl reload nginx

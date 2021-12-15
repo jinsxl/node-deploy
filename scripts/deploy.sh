@@ -5,7 +5,7 @@ pwd
 cd /home/ec2-user/
 
 echo "> Get Current Profile"
-CURRENT_PROFILE=$(curl -s http://localhost/profile)
+CURRENT_PROFILE=$(curl -s http://127.0.0.1/profile)
 echo "> $CURRENT_PROFILE"
 
 echo "> Find IDLE Profile"
