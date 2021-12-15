@@ -28,7 +28,10 @@ then
 else
   echo "> stop pm2 process $IDLE_PID"
   pm2 stop $IDLE_PID
+  rm -rf $IDLE_PROFILE
 fi
+
+cp -r build/ $IDLE_PROFILE
 
 echo "> $IDLE_PROFILE start"
 pm2 start $IDLE_PROFILE.config.js
